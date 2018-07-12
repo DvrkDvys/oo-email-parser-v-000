@@ -7,14 +7,14 @@ require 'pry'
 
 class EmailParser
   attr_reader :emails
-  
-  def intitialize(emails)
-    @emails = emails
-  end
-  
-  def parse
-    emails.split.map do |i|
-      email.split(,)
-    end.flatten.uniq
-  end
+    
+    def intitialize(emails)
+      @emails = emails
+    end
+    
+    def parse
+      emails.split.map do |i|
+        email.split(,)
+      end.flatten.uniq
+    end
   end
