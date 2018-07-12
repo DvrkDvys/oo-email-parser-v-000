@@ -15,7 +15,7 @@ class EmailParser
     def parse
        i =  @emails.split(",")
         i.flatten.uniq
-      end
+      
     end
   end
 
