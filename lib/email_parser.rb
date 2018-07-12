@@ -16,7 +16,7 @@ class EmailParser
   # then returns array of only unique emails
   def parse
     result = @emails.split(/\b[,\s]+/)
-    result = @emails.split(",")
+    result = @emails.split("," && " ")
     result.uniq
   end
 end
