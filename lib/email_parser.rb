@@ -33,4 +33,4 @@ class EmailParser
 #     result = @emails.split(/\b[,\s]+/)
 #     result.uniq
 #   end
-end
+# end
