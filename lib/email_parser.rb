@@ -5,33 +5,32 @@
 require 'pry'
 
 
-# class EmailParser
-#   # attr_reader :emails
-    
-#     def intitialize(emails)
-#       @emails = emails
-#     end
-    
-#     def parse
-#       # @emails.split.map do |i|
-#       #   @emails.split(",")
-#         i = @emails.split(/\b[,\s]+/)
-
-#       i.flatten.uniq
-#     end
-#   end
-
-
 class EmailParser
+  # attr_reader :emails
+    
+    def intitialize(emails)
+      @emails = emails
+    end
+    
+    def parse
+      @emails.split.map do |i|
+        @emails.split(",")
+        i.flatten.uniq
+      end
+    end
+  end
+
+
+# class EmailParser
  
-  def initialize(emails)
-    @emails = emails
-  end
+#   def initialize(emails)
+#     @emails = emails
+#   end
   
-  # splits the emails by comma, space, or combination of both
-  # then returns array of only unique emails
-  def parse
-    result = @emails.split(/\b[,\s]+/)
-    result.uniq
-  end
+#   # splits the emails by comma, space, or combination of both
+#   # then returns array of only unique emails
+#   def parse
+#     result = @emails.split(/\b[,\s]+/)
+#     result.uniq
+#   end
 end
