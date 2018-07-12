@@ -7,29 +7,15 @@ require 'pry'
 
 class EmailParser
   attr_reader :emails
-    
-    def intitialize(emails)
-      @emails = emails
-    end
-    
-    def parse
-       i =  @emails.split(" , ")
-       i.map!
-       i.uniq
-    end
+
+  def initialize(emails)
+    @emails = emails
   end
-
-
-# class EmailParser
- 
-#   def initialize(emails)
-#     @emails = emails
-#   end
   
-#   # splits the emails by comma, space, or combination of both
-#   # then returns array of only unique emails
-#   def parse
-#     result = @emails.split(/\b[,\s]+/)
-#     result.uniq
-#   end
-# end
+  # splits the emails by comma, space, or combination of both
+  # then returns array of only unique emails
+  def parse
+    result = @emails.split(/\b[,\s]+/)
+    result.uniq
+  end
+end
