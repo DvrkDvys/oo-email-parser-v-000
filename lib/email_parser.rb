@@ -12,9 +12,9 @@ class EmailParser
       @emails = emails
     end
     
-    def self.parse
-      emails.split.map do |i|
-        emails.split(",")
+    def parse
+      @emails.split.map do |i|
+        @emails.split(",")
       end.flatten.uniq
     end
   end
