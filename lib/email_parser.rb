@@ -10,7 +10,12 @@ class EmailParser
     @@all
   end
   
-  def self.parser(emails)
+  def self.new(emails) 
+    email_arr = self.new
+    self.class.all << email_arr 
+  end
+  
+  def self.parser
     parts = filename.split(" - ")
     artist_name = parts[0]
     song_name = parts[1].gsub(".mp3", "")
