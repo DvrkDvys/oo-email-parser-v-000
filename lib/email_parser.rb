@@ -12,7 +12,9 @@ class EmailParser
   
   def self.new(emails) 
     email_arr = self.new
-    self.class.all << email_arr 
+    self.class.all << email_arr
+    # self.all.detect{|s| s.name == song_name}
+
   end
   
   def self.parser
