@@ -5,18 +5,18 @@
 require 'pry'
 
 
-class EmailParser
-  # attr_reader :emails
+# class EmailParser
+#   # attr_reader :emails
     
-    def intitialize(emails)
-      @emails = emails
-    end
+#     def intitialize(emails)
+#       @emails = emails
+#     end
     
-    def parse
-      # @emails.split.map do |i|
-      #   @emails.split(",")
-        i = @emails.split(/\b[,\s]+/)
+#     def parse
+#       # @emails.split.map do |i|
+#       #   @emails.split(",")
+#         i = @emails.split(/\b[,\s]+/)
 
-      i.flatten.uniq
-    end
-  end
+#       i.flatten.uniq
+#     end
+#   end
