@@ -3,27 +3,15 @@
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
 class EmailParser
+  attr_reader :emails
   
-  @@all = []
-  
-  def self.all 
-    @@all
+  def intitialize(emails)
+    @emails = emails
   end
   
-  def self.new(emails) 
-    email_arr = self.new
-    self.class.all << email_arr
-    # self.all.detect{|s| s.name == song_name}
-
+  def parse
+    emails.split.map do |i|
+      email.split(,)
+    end.flatten.uniq
   end
-  
-  def self.parser
-    parts = filename.split(" - ")
-    artist_name = parts[0]
-    song_name = parts[1].gsub(".mp3", "")
-
-    song = self.create
-    song.name = song_name
-    song.artist_name = artist_name
-    song
   end
