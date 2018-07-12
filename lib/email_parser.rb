@@ -20,3 +20,18 @@ require 'pry'
 #       i.flatten.uniq
 #     end
 #   end
+
+
+class EmailParser
+ 
+  def initialize(emails)
+    @emails = emails
+  end
+  
+  # splits the emails by comma, space, or combination of both
+  # then returns array of only unique emails
+  def parse
+    result = @emails.split(/\b[,\s]+/)
+    result.uniq
+  end
+end
