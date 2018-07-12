@@ -14,7 +14,7 @@ class EmailParser
     
     def parse
        i =  @emails.split(" , ")
-       i.map! {|x| if x !=" , " them x end}
+       i.map!
        i.uniq
     end
   end
